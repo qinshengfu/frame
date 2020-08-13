@@ -37,7 +37,7 @@ public class CaptchaController {
      * 验证码生成
      */
     @GetMapping(value = "/captchaimage")
-    private ModelAndView getKaptchaImage(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    private ModelAndView getKaptchaImage(HttpServletRequest request, HttpServletResponse response){
         ServletOutputStream out = null;
         try
         {

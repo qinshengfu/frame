@@ -3,6 +3,7 @@ package com.qsf.frame.config.web;
 import com.google.code.kaptcha.impl.DefaultKaptcha;
 import com.google.code.kaptcha.util.Config;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 import java.util.Properties;
 
@@ -12,6 +13,7 @@ import java.util.Properties;
  * @Date 2020/8/13 10:37
  * @Version 1.0
  */
+@Configuration
 public class KaptchaConfig {
     @Bean(name = "captchaProducer")
     public DefaultKaptcha getKaptchaBean()

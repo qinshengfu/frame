@@ -16,7 +16,7 @@ spring:
     password:
 
   thymeleaf:
-    #¿ªÆôMVC thymeleaf ÊÓÍ¼½âÎö
+    #å¼€å¯MVC thymeleaf è§†å›¾è§£æ
     enabled: true
     encoding: utf-8
     #mode: HTML5
@@ -24,12 +24,12 @@ spring:
     suffix: .html
   servlet:
     multipart:
-      enabled: true #ÊÇ·ñÆôÓÃhttpÉÏ´«´¦Àí
-      max-file-size: 2MB #ÉèÖÃµ¥¸öÎÄ¼ş×î´ó³¤¶È
-      max-request-size: 2MB #×î´óÇëÇóÎÄ¼şµÄ´óĞ¡
+      enabled: true #æ˜¯å¦å¯ç”¨httpä¸Šä¼ å¤„ç†
+      max-file-size: 2MB #è®¾ç½®å•ä¸ªæ–‡ä»¶æœ€å¤§é•¿åº¦
+      max-request-size: 2MB #æœ€å¤§è¯·æ±‚æ–‡ä»¶çš„å¤§å°
   jackson:
     default-property-inclusion: non_null
-#      file-size-threshold: 20MB #µ±ÎÄ¼ş´ïµ½¶àÉÙÊ±½øĞĞ´ÅÅÌĞ´Èë
+#      file-size-threshold: 20MB #å½“æ–‡ä»¶è¾¾åˆ°å¤šå°‘æ—¶è¿›è¡Œç£ç›˜å†™å…¥
 
 
 
@@ -53,19 +53,19 @@ mybatis-plus:
   global-config:
     db-config:
       table-prefix: tb_
-      #1»òÕßnot_null£¬Êı¾İÎª¿ÕÊ±²»¸üĞÂ
+      ##1æˆ–è€…not_null
       field-strategy: not_null
 
 
-#Path¹ÜÀí
-#²»Í¬ÏµÍ³ÏÂÉÏ´«Í¼Æ¬µÄÂ·¾¶
+#Pathç®¡ç†
+#ä¸åŒç³»ç»Ÿä¸‹ä¸Šä¼ å›¾ç‰‡çš„è·¯å¾„
 win.base.image.path: F:/ep/image
 linux.base.image.path: /Users/ep/image
-#²»Í¬ÏµÍ³ÏÂ»ñÈ¡ÏîÄ¿ÍâÍ¼Æ¬Â·¾¶
+#ä¸åŒç³»ç»Ÿä¸‹è·å–é¡¹ç›®å¤–å›¾ç‰‡è·¯å¾„
 win.base.upload.path: F:/ep/image/upload/
 linux.base.upload.path: /Users/ep/image/upload/
-#²»Í¬ÏµÍ³ÏÂ±¸·İÊı¾İ¿âÂ·¾¶
+#ä¸åŒç³»ç»Ÿä¸‹å¤‡ä»½æ•°æ®åº“è·¯å¾„
 win.base.backup.path: G:/backup/
 linux.base.backup.path: /Users/backup/
-#»ñÈ¡ep½»Ò×µÄÆ¾Ö¤Â·¾¶
+#è·å–epäº¤æ˜“çš„å‡­è¯è·¯å¾„
 ep.relevant.path: /upload/images/item/pz/
