@@ -1,0 +1,71 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /demo1
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/practice?serverTimezone=GMT%2b8&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+
+  thymeleaf:
+    #开启MVC thymeleaf 视图解析
+    enabled: true
+    encoding: utf-8
+    #mode: HTML5
+    prefix: classpath:/templates/
+    suffix: .html
+  servlet:
+    multipart:
+      enabled: true #是否启用http上传处理
+      max-file-size: 2MB #设置单个文件最大长度
+      max-request-size: 2MB #最大请求文件的大小
+  jackson:
+    default-property-inclusion: non_null
+#      file-size-threshold: 20MB #当文件达到多少时进行磁盘写入
+
+
+
+
+#  spring:
+#    resources:
+#      static-locations: classpath:/static,classpath:/public,classpath:/resources,classpath:/META-INF/resource,file:G:/fakepath/tp/
+
+#  mvc:
+#    #view:
+#    # prefix: /
+#    #suffix: .html
+#    static-path-pattern: /static/**
+#    resources:
+#      static-locations: classpath:/static/
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      table-prefix: tb_
+      #1或者not_null，数据为空时不更新
+      field-strategy: not_null
+
+
+#Path管理
+#不同系统下上传图片的路径
+win.base.image.path: F:/ep/image
+linux.base.image.path: /Users/ep/image
+#不同系统下获取项目外图片路径
+win.base.upload.path: F:/ep/image/upload/
+linux.base.upload.path: /Users/ep/image/upload/
+#不同系统下备份数据库路径
+win.base.backup.path: G:/backup/
+linux.base.backup.path: /Users/backup/
+#获取ep交易的凭证路径
+ep.relevant.path: /upload/images/item/pz/
